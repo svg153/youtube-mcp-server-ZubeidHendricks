@@ -16,6 +16,8 @@
     "start": "node ./dist/index.js",
     "build": "tsc",
     "dev": "nodemon --exec \"npm run build && npm start\" --ext ts",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
@@ -28,7 +30,10 @@
     "@types/node": "^18.0.0",
     "typescript": "^5.0.0",
     "ts-node": "^10.9.1",
-    "nodemon": "^3.0.0"
+    "nodemon": "^3.0.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
   },
   "keywords": [
     "youtube",
